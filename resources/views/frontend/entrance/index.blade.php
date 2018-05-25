@@ -37,6 +37,8 @@
 
     @include('frontend.module.module-partner')
 
+    @include('frontend.module.module-contact')
+
 {{--    @include('templates.themes.vipp.module.index.module-template-1',['datas'=>$templates])--}}
 
 @endsection
