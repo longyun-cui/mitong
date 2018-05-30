@@ -10,8 +10,8 @@
             ],
 
             'online' => [
-                'root' => 'http://shmitong.com',
-                'cdn' => 'http://cdn.shmitong.com',
+                'root' => 'http://age21.date',
+                'cdn' => 'http://cdn.age21.date',
             ],
 
             'front' => [

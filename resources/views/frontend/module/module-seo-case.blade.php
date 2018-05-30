@@ -19,7 +19,7 @@
                             <tbody>
                                 <tr>
                                     <td colspan="2" class="keyword ">
-                                        <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&amp;wd=智能家居展">{{$v->keywords or ''}}</a>
+                                        <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&wd={{$v->keywords or ''}}">{{$v->keywords or ''}}</a>
                                     </td>
                                 </tr>
                                 <tr>
