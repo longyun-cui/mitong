@@ -42,6 +42,7 @@
 
 
 .section-case table {
+    table-layout: fixed;
     width: 100%;
     height: auto;
     font-size: 14px;
@@ -51,6 +52,7 @@
     height: auto;
 }
 .section-case tr {
+    position: relative;
     width: 100%;
     height: auto;
     padding: 8px 0;
@@ -59,7 +61,14 @@
     border: 1px solid #d8d8d8;
     color: #a5a5a5;
     padding: 8px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
 }
+.section-case td:first-child {
+    max-width: 80px;
+}
+
 
 
 /**/

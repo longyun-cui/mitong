@@ -22,22 +22,29 @@
                                         <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&wd={{$v->keywords or ''}}">{{$v->keywords or ''}}</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>网址</td>
-                                    <td>{{$v->link_url or ''}}</td>
+                                <tr class="">
+                                    <td class="td-left">网址</td>
+                                    <td class="row-ellipsis">{{$v->link_url or ''}}</td>
                                 </tr>
                                 <tr>
-                                    <td>初始排名</td>
-                                    <td>{{ json_decode($v->custom)->previous_rank }}</td></tr>
+                                    <td class="td-left">初始排名</td>
+                                    <td class="row-ellipsis">{{ json_decode($v->custom)->previous_rank }}</td></tr>
                                 <tr>
-                                    <td>当前排名</td>
-                                    <td>{{ json_decode($v->custom)->after_rank }}</td></tr>
+                                    <td class="td-left">当前排名</td>
+                                    <td class="row-ellipsis">{{ json_decode($v->custom)->after_rank }}</td></tr>
                                 <tr>
-                                    <td>渠道</td>
-                                    @if($v->type == 1) <td><img src="/mitong/images/pc.png"></td>
-                                    @elseif($v->type == 2) <td><img src="/mitong/images/phone.png"></td>
-                                    @endif
-
+                                    <td class="td-left">渠道</td>
+                                    <td>
+                                        @if($v->type == 1)
+                                            <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&wd={{$v->keywords or ''}}">
+                                                <img src="/mitong/images/pc.png">
+                                            </a>
+                                        @elseif($v->type == 2)
+                                            <a target="_blank" href="https://m.baidu.com/s?ie=UTF-8&wd={{$v->keywords or ''}}">
+                                                <img src="/mitong/images/phone.png">
+                                            </a>
+                                        @endif
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -77,7 +84,7 @@
 
 
         <div class="text-center">
-            <a href="cases.php.html" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">查看更多 &nbsp;&nbsp;<i class="icon-hand-right"></i></a>
+            <a href="javascript:void(0);" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">查看更多 &nbsp;&nbsp;<i class="icon-hand-right"></i></a>
         </div>
 
     </div>

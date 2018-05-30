@@ -29,7 +29,11 @@
             </div>
 
             <div class="module-footer-container">
-                <a href="{{ '/website/templates' }}" class="view-more visible-xs- btn-md btn-more">更多</a>
+                <div class="text-center">
+                    <a href="javascript:void(0);" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">
+                        查看更多 &nbsp;&nbsp;<i class="icon-hand-right"></i>
+                    </a>
+                </div>
             </div>
 
 
