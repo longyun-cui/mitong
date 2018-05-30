@@ -24,7 +24,7 @@
                                 </tr>
                                 <tr>
                                     <td>网址</td>
-                                    <td>www.dj***.com</td>
+                                    <td>{{$v->link_url or ''}}</td>
                                 </tr>
                                 <tr>
                                     <td>初始排名</td>
