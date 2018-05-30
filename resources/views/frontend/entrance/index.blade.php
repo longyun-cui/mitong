@@ -33,12 +33,12 @@
 
     @include('frontend.module.module-advantage')
 
-    @include('frontend.module.module-case')
+    @include('frontend.module.module-seo-case', ['datas'=>$seoCases])
+
+    @include('frontend.module.module-website-template', ['datas'=>$websiteTemplates])
 
     @include('frontend.module.module-partner')
 
     @include('frontend.module.module-contact')
-
-{{--    @include('templates.themes.vipp.module.index.module-template-1',['datas'=>$templates])--}}
 
 @endsection

@@ -1,6 +1,11 @@
 <?php
 namespace App\Repositories\Front;
 
+use App\Models\RootModule;
+use App\Models\RootMenu;
+use App\Models\RootItem;
+use App\Models\RootSeoCase;
+use App\Models\RootWebsiteTemplate;
 
 use App\Repositories\Common\CommonRepository;
 
@@ -20,8 +25,13 @@ class IndexRepository {
     public function index()
     {
         $info = json_decode(json_encode(config('mitong.company.info')));
-        $menus = [];
-        return view('frontend.entrance.index')->with(['info'=>$info, 'menus'=>$menus]);
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'desc')->get();
+
+        $seoCases = RootSeoCase::where(['active'=>1])->orderby('id', 'desc')->limit(6)->get();
+        $websiteTemplates = RootWebsiteTemplate::where(['active'=>1])->orderby('id', 'desc')->limit(8)->get();
+
+        return view('frontend.entrance.index')
+            ->with(['info'=>$info, 'menus'=>$menus, 'seoCases'=>$seoCases, 'websiteTemplates'=>$websiteTemplates]);
     }
 
 

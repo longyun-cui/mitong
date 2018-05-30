@@ -20,12 +20,16 @@
                             </div>
                             <div class="info-row">
                                 <div class="icon icon-telephone"><i class="fa fa-phone"></i></div>
-                                <div class="text"><span>186-2136-5151</span></div>
+                                <div class="text"><span>售前 186-2136-5151</span></div>
                             </div>
                             <div class="info-row">
-                                <div class="icon icon-email"><i class="fa fa-envelope"></i></div>
-                                <div class="text"><span>info@shmitong.com</span></div>
+                                <div class="icon icon-telephone"><i class="fa fa-phone"></i></div>
+                                <div class="text"><span>售后 177-1736-8566</span></div>
                             </div>
+                            {{--<div class="info-row">--}}
+                                {{--<div class="icon icon-email"><i class="fa fa-envelope"></i></div>--}}
+                                {{--<div class="text"><span>info@shmitong.com</span></div>--}}
+                            {{--</div>--}}
                             <div class="info-row">
                                 <div class="icon icon-website"><i class="fa fa-globe"></i></div>
                                 <div class="text"><span>www.shmitong.com</span></div>

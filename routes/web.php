@@ -58,4 +58,110 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
     });
 
+
+    // 后台管理，需要登录
+    Route::group(['middleware' => 'admin'], function () {
+
+        $controller = "AdminController";
+
+        Route::get('/', $controller.'@index');
+
+        // 管理员模块
+        Route::group(['prefix' => 'administrator'], function () {
+            $controller = "AdministratorController";
+
+            Route::get('/', $controller.'@index');
+            Route::get('index', $controller.'@index');
+            Route::match(['get','post'], 'edit', $controller.'@editAction');
+
+            Route::match(['get','post'], 'password/reset', $controller.'@password_reset');
+
+            Route::match(['get','post'], 'list', $controller.'@viewList');
+        });
+
+        // 样式模块
+        Route::group(['prefix' => 'module'], function () {
+            $controller = "ModuleController";
+
+            Route::get('/', $controller.'@index');
+            Route::get('index', $controller.'@index');
+            Route::match(['get','post'], 'list', $controller.'@viewList');
+            Route::get('create', $controller.'@createAction');
+            Route::match(['get','post'], 'edit', $controller.'@editAction');
+            Route::match(['get','post'], 'sort', $controller.'@sortAction');
+            Route::post('delete', $controller.'@deleteAction');
+            Route::post('enable', $controller.'@enableAction');
+            Route::post('disable', $controller.'@disableAction');
+
+            Route::post('delete_multiple_option', $controller.'@deleteMultipleOption');
+        });
+
+        // 目录模块
+        Route::group(['prefix' => 'menu'], function () {
+            $controller = "MenuController";
+
+            Route::get('/', $controller.'@index');
+            Route::get('index', $controller.'@index');
+            Route::match(['get','post'], 'list', $controller.'@viewList');
+            Route::match(['get','post'], 'items', $controller.'@viewItemsList');
+            Route::get('create', $controller.'@createAction');
+            Route::match(['get','post'], 'edit', $controller.'@editAction');
+            Route::match(['get','post'], 'sort', $controller.'@sortAction');
+            Route::post('delete', $controller.'@deleteAction');
+            Route::post('enable', $controller.'@enableAction');
+            Route::post('disable', $controller.'@disableAction');
+        });
+
+        // 内容模块
+        Route::group(['prefix' => 'item'], function () {
+            $controller = "ItemController";
+
+            Route::get('/', $controller.'@index');
+            Route::get('index', $controller.'@index');
+            Route::match(['get','post'], 'list', $controller.'@viewList');
+            Route::get('create', $controller.'@createAction');
+            Route::match(['get','post'], 'edit', $controller.'@editAction');
+            Route::post('delete', $controller.'@deleteAction');
+            Route::post('enable', $controller.'@enableAction');
+            Route::post('disable', $controller.'@disableAction');
+
+            Route::get('select2_menus', $controller.'@select2_menus');
+        });
+
+        //模板模块
+        Route::group(['prefix' => 'website/template'], function () {
+            $controller = "WebsiteTemplateController";
+
+            Route::get('/', $controller.'@index');
+            Route::get('index', $controller.'@index');
+            Route::match(['get','post'], 'list', $controller.'@viewList');
+            Route::get('create', $controller.'@createAction');
+            Route::match(['get','post'], 'edit', $controller.'@editAction');
+            Route::post('delete', $controller.'@deleteAction');
+            Route::post('enable', $controller.'@enableAction');
+            Route::post('disable', $controller.'@disableAction');
+
+            Route::get('select2_menus', $controller.'@select2_menus');
+        });
+        //模板模块
+        Route::group(['prefix' => 'seo/case'], function () {
+            $controller = "SeoCaseController";
+
+            Route::get('/', $controller.'@index');
+            Route::get('index', $controller.'@index');
+            Route::match(['get','post'], 'list', $controller.'@viewList');
+            Route::get('create', $controller.'@createAction');
+            Route::match(['get','post'], 'edit', $controller.'@editAction');
+            Route::post('delete', $controller.'@deleteAction');
+            Route::post('enable', $controller.'@enableAction');
+            Route::post('disable', $controller.'@disableAction');
+
+            Route::get('select2_menus', $controller.'@select2_menus');
+        });
+
+    });
+
+
 });
+
+

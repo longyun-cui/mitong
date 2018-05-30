@@ -22,6 +22,7 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/common.css') }}" media="all" />
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/frontend/index.css') }}" media="all" />
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/backend/index.css') }}" media="all" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('root/css/index.css') }}" media="all" />
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/animate/wicked.css') }}" media="all" />
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/animate/hover.css') }}" media="all" />
 
@@ -207,8 +208,7 @@
 
     <script src="/mitong/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 
-    <script src="/mitong/js/wow.min.js" type="text/javascript"
-            charset="utf-8"></script>
+    <script src="/mitong/js/wow.min.js" type="text/javascript" charset="utf-8"></script>
 
     <div class="totalcount" style="display: none">
     </div>

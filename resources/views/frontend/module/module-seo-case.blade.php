@@ -13,54 +13,36 @@
         <section class="case-list- container-" style="padding-top: 0">
             <ul class="list-unstyled clearfix">
 
-                    <li class="rectangle-container" style="padding: 16px;">
+                @foreach($datas as $v)
+                    <li class="rectangle-container">
                         <table>
                             <tbody>
                                 <tr>
                                     <td colspan="2" class="keyword ">
-                                        <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&amp;wd=智能家居展">智能家居展</a>
+                                        <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&amp;wd=智能家居展">{{$v->keywords or ''}}</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>网址</td> <td>www.dj***.com</td></tr>
-                                <tr><td>初始排名</td> <td>100+</td></tr>
-                                <tr><td>当前排名</td> <td>1</td></tr>
-                                <tr><td>渠道</td> <td><img src="/mitong/images/pc.png"></td></tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="rectangle-container">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td colspan="2" class="keyword ">
-                                    <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&amp;wd=智能家居展">智能家居展</a>
-                                </td>
-                            </tr>
-                            <tr><td>网址</td> <td>www.dj***.com</td></tr>
-                            <tr><td>初始排名</td> <td>100+</td></tr>
-                            <tr><td>当前排名</td> <td>1</td></tr>
-                            <tr><td>渠道</td> <td><img src="/mitong/images/phone.png"></td></tr>
-                            </tbody>
-                        </table>
-                    </li>
+                                    <td>网址</td>
+                                    <td>www.dj***.com</td>
+                                </tr>
+                                <tr>
+                                    <td>初始排名</td>
+                                    <td>{{ json_decode($v->custom)->previous_rank }}</td></tr>
+                                <tr>
+                                    <td>当前排名</td>
+                                    <td>{{ json_decode($v->custom)->after_rank }}</td></tr>
+                                <tr>
+                                    <td>渠道</td>
+                                    @if($v->type == 1) <td><img src="/mitong/images/pc.png"></td>
+                                    @elseif($v->type == 2) <td><img src="/mitong/images/phone.png"></td>
+                                    @endif
 
-                    <li class="rectangle-container">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td colspan="2" class="keyword ">
-                                    <a target="_blank" href="https://www.baidu.com/s?ie=UTF-8&amp;wd=智能家居展">智能家居展</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>网址</td> <td>www.dj***.com</td></tr>
-                            <tr><td>初始排名</td> <td>100+</td></tr>
-                            <tr><td>当前排名</td> <td>1</td></tr>
-                            <tr><td>渠道</td> <td><img src="/mitong/images/pc.png"></td></tr>
+                                </tr>
                             </tbody>
                         </table>
                     </li>
+                @endforeach
 
 
 
