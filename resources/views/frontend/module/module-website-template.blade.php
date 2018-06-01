@@ -7,7 +7,7 @@
                 <span class="menu-title"><b>网站模板</b></span>
             </div>
 
-            <div class="module-block-container rectangle-col-4 wow fadeInUp" data-wow-delay=".4s">
+            <div class="module-block-container rectangle-col-4 wow fadeInUp" data-wow-delay=".3s">
 
                 @foreach($datas as $v)
                     <a target="_blank" href="{{ url('/website/template/'.encode($v->id)) }}">
@@ -28,12 +28,16 @@
 
             </div>
 
-            <div class="module-footer-container">
-                <div class="text-center">
-                    <a href="javascript:void(0);" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">
-                        查看更多 &nbsp;&nbsp;<i class="icon-hand-right"></i>
-                    </a>
-                </div>
+            <div class="module-footer-container wow fadeInUp" data-wow-delay=".4s">
+                @if(!empty($module_type) && $module_type == 'paginate')
+                    {{ $datas->links() }}
+                @else
+                    <div class="text-center">
+                        <a href="{{url('/website/templates')}}" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">
+                            查看更多 <i class="icon-hand-right"></i>
+                        </a>
+                    </div>
+                @endif
             </div>
 
 

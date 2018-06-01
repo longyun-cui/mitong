@@ -25,13 +25,14 @@ class IndexRepository {
     public function index()
     {
         $info = json_decode(json_encode(config('mitong.company.info')));
-        $menus = RootMenu::where(['active'=>1])->orderby('order', 'desc')->get();
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
 
         $seoCases = RootSeoCase::where(['active'=>1])->orderby('id', 'desc')->limit(6)->get();
         $websiteTemplates = RootWebsiteTemplate::where(['active'=>1])->orderby('id', 'desc')->limit(8)->get();
 
-        return view('frontend.entrance.index')
-            ->with(['info'=>$info, 'menus'=>$menus, 'seoCases'=>$seoCases, 'websiteTemplates'=>$websiteTemplates]);
+        $html = view('frontend.entrance.index')
+            ->with(['info'=>$info, 'menus'=>$menus, 'seoCases'=>$seoCases, 'websiteTemplates'=>$websiteTemplates])->__toString();
+        return $html;
     }
 
 
@@ -39,41 +40,29 @@ class IndexRepository {
     //
     public function website_templates()
     {
-        $info = json_decode(json_encode(config('outside.company.info')));
-        $org = $info;
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderBy('order', 'asc')->get();
 
-        $templates = OutsideTemplate::where(['active'=>1])->orderby('updated_at','desc')->paginate(16);
+        $websiteTemplates = RootWebsiteTemplate::where(['active'=>1])->orderby('updated_at','desc')->paginate(16);
 
-        $menus = OutsideMenu::with([
-//            'items'=>function ($query1) { $query1->where('active', 1)->orderBy('updated_at', 'desc'); }
-        ])->where('active', 1)->orderBy('order', 'asc')->get();
-
-
-        $html = view('outside.frontend.vipp.entrance.website.templates')
-            ->with(['org'=>$org,'info'=>$info,'menus'=>$menus,'templates'=>$templates])->__toString();
-
+        $html = view('frontend.entrance.website.templates')
+            ->with(['info'=>$info, 'menus'=>$menus, 'websiteTemplates'=>$websiteTemplates])->__toString();
         return $html;
     }
 
     //
     public function website_template($id)
     {
-        $info = json_decode(json_encode(config('outside.company.info')));
-        $org = $info;
-
         $decode_id = decode($id);
         if(intval($decode_id) !== 0 && !$decode_id) dd("地址有误");
 
-        $template = OutsideTemplate::where(['active'=>1])->orderby('updated_at','desc')->find($decode_id);
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderBy('order', 'asc')->get();
 
-        $menus = OutsideMenu::with([
-//            'items'=>function ($query1) { $query1->where('active', 1)->orderBy('updated_at', 'desc'); }
-        ])->where('active', 1)->orderBy('order', 'asc')->get();
+        $websiteTemplate = RootWebsiteTemplate::where(['active'=>1])->orderby('updated_at','desc')->find($decode_id);
 
-
-        $html = view('outside.frontend.vipp.entrance.website.template')
-            ->with(['org'=>$org,'info'=>$info,'menus'=>$menus,'template'=>$template])->__toString();
-
+        $html = view('frontend.entrance.website.template')
+            ->with(['info'=>$info, 'menus'=>$menus, 'websiteTemplate'=>$websiteTemplate])->__toString();
         return $html;
     }
 

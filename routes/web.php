@@ -39,6 +39,9 @@ Route::group(['namespace' => 'Front'], function () {
 
     Route::get('/', $controller.'@index');
 
+    Route::get('website/templates', $controller.'@view_website_templates');
+    Route::get('website/template/{id?}', $controller.'@view_website_template');
+
 
 });
 

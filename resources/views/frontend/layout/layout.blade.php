@@ -10,7 +10,10 @@
     <link rel="shortcut icon" href="images/favicon.ico.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no" />
+
     <!-- include need css -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/mitong/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="/mitong/css/public.css" />
     <link rel="stylesheet" type="text/css" href="/mitong/css/index.css" />
@@ -27,14 +30,10 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/animate/hover.css') }}" media="all" />
 
 
+    @yield('css')
+    @yield('style')
 
 
-    <!--[if lt IE 9]>
-    <script src="/mitong/js/html5.min.js"></script>
-    <script src="/mitong/js/respond.min.js"></script>
-    <![endif]-->
-
-    <script src="/mitong/js/jquery.min.js"></script>
 </head>
 <body>
 
@@ -213,6 +212,18 @@
     <div class="totalcount" style="display: none">
     </div>
 
+
+
+
+    <!--[if lt IE 9]>
+    <script src="/mitong/js/html5.min.js"></script>
+    <script src="/mitong/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/mitong/js/jquery.min.js"></script>
+
+
+
     <script type="text/javascript">
 
         function formatNumberRgx(num) {
@@ -291,6 +302,10 @@
         })
 
     </script>
+
+
+    @yield('js')
+    @yield('script')
 
 
 </body>
