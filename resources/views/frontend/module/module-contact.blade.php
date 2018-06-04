@@ -5,17 +5,17 @@
 
         {{--<!--header-->--}}
         <div class="module-header-box">
-            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".2s">
+            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".1s">
                 <h2 class="">联系我们</h2>
             </div>
-            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".4s">
+            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".2s">
                 <h4 class="">Contact Us</h4>
             </div>
         </div>
 
 
         {{--<!--body-->--}}
-        <div class="module-body-box wow fadeInUp" data-wow-delay=".4s">
+        <div class="module-body-box wow fadeInUp" data-wow-delay=".3s">
 
             <section class="col-md-8 col-lg-8">
                     <div class="">
@@ -47,8 +47,8 @@
             <section class="col-md-4 col-lg-4">
                     <div class="">
                         <form name="sentMessage" id="contactForm" novalidate="">
-                            <div class="row">
-                                <div class="row full">
+                            <div class="">
+                                <div class="full">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="您的姓名 *" id="name" required="" data-validation-required-message="Please enter your name.">
                                         <p class="help-block text-danger"></p>

@@ -30,7 +30,7 @@
 
 
     {{--banner--}}
-    @include('frontend.component.banner')
+    @include('frontend.module.module-banner-platform')
 
     {{--module-website-template--}}
     @include('frontend.module.module-website-template', ['datas'=>$websiteTemplates, 'module_name'=>'建站模板', 'module_type'=>'paginate'])

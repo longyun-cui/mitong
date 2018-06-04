@@ -3,73 +3,76 @@
 </section>
 
 <div class="wrapper-footer-container" id="contact" style="border-top: 2px solid #e34f43">
-    <div class="col-md-14">
-        <div class="row full block-in">
-            <div class="row footer-title-row"><b>企业简介</b></div>
-            <div class="row">
-                {{$info->description or '暂无简介'}}
-            </div>
+
+
+    <div class="block-in">
+        <div class="footer-title-row"><b>企业简介</b></div>
+        <div class="">
+            {{$info->description or '暂无简介'}}
         </div>
-        <div class="row">&nbsp;</div>
     </div>
-    <div class="col-md-14">
-        <div class="row full block-in">
+    <div class="">&nbsp;</div>
 
-            <div class="row footer-title-row"><b>网站地图</b></div>
-            <div class="row">
-                @foreach($menus as $menu)
-                    <a href="{{ url('/menu/'.encode($menu->id)) }}">{{ $menu->title }}</a>
-                    @if(!$loop->last)|@endif
-                @endforeach
-            </div>
-            <div class="row">&nbsp;</div>
 
-            <div class="row footer-title-row">
-                <b>联系方式</b>
-                <div class="footer-block-row">
-                    @if(!empty($info->wechat_qrcode))
-                    <div class="footer-block">
-                        <div class="footer-block-top">
-                            <img src="{{ url($info->wechat_qrcode) }}"/>
-                        </div>
-                        <div class="footer-block-bottom">
-                            微信二维码
-                        </div>
+    <div class="block-in">
+
+        <div class="footer-title-row"><b>网站地图</b></div>
+        <div class="">
+            @foreach($menus as $menu)
+                <a href="{{ url('/menu/'.encode($menu->id)) }}">{{ $menu->title }}</a>
+                @if(!$loop->last)|@endif
+            @endforeach
+        </div>
+        <div class="">&nbsp;</div>
+
+        <div class="footer-title-row">
+            <b>联系方式</b>
+            <div class="footer-block-row">
+                @if(!empty($info->wechat_qrcode))
+                <div class="footer-block">
+                    <div class="footer-block-top">
+                        <img src="{{ url($info->wechat_qrcode) }}"/>
                     </div>
-                    @endif
+                    <div class="footer-block-bottom">
+                        微信二维码
+                    </div>
                 </div>
+                @endif
             </div>
-            @if(!empty($info->address))
-                <div class="row"><i class="fa fa-location-arrow"></i> 地址： {{$info->address or ''}}</div>
-            @endif
-            @if(!empty($info->after_sale))
-                <div class="row"><i class="fa fa-phone"></i> 全国售前热线： {{$info->pre_sale or ''}}</div>
-            @endif
-            @if(!empty($info->after_sale))
-                <div class="row"><i class="fa fa-phone"></i> 全国售后热线： {{$info->after_sale or ''}}</div>
-            @endif
-
-            @if(!empty($info->email))
-                <div class="row"><i class="fa fa-envelope"></i> 邮箱： {{$info->email or ''}}</div>
-            @endif
-            @if(!empty($info->wechat_id))
-                <div class="row"><i class="fa fa-weixin"></i> 微信： {{$info->wechat_id or ''}}</div>
-            @endif
-            @if(!empty($info->weibo_name))
-                <div class="row"><i class="fa fa-weibo"></i> 微博：
-                    @if(!empty($info->weibo_address))
-                        <a target="_blank" href="{{$info->weibo_address or ''}}">{{$info->weibo_name or ''}}</a>
-                    @else
-                        {{$info->weibo_name or ''}}
-                    @endif
-                </div>
-            @endif
-
-            <div class="row">&nbsp;</div>
-            <div class="row">版权所有 <a target="_blank" href="javascript:void(0);">©上海米同网络科技有限公司</a></div>
-            <div class="row"><a target="_blank" href="http://www.miitbeian.gov.cn">沪ICP备18011005号</a></div>
         </div>
+        @if(!empty($info->address))
+            <div class=""><i class="fa fa-location-arrow"></i> 地址： {{$info->address or ''}}</div>
+        @endif
+        @if(!empty($info->after_sale))
+            <div class=""><i class="fa fa-phone"></i> 全国售前热线： {{$info->pre_sale or ''}}</div>
+        @endif
+        @if(!empty($info->after_sale))
+            <div class=""><i class="fa fa-phone"></i> 全国售后热线： {{$info->after_sale or ''}}</div>
+        @endif
+
+        @if(!empty($info->email))
+            <div class=""><i class="fa fa-envelope"></i> 邮箱： {{$info->email or ''}}</div>
+        @endif
+        @if(!empty($info->wechat_id))
+            <div class=""><i class="fa fa-weixin"></i> 微信： {{$info->wechat_id or ''}}</div>
+        @endif
+        @if(!empty($info->weibo_name))
+            <div class=""><i class="fa fa-weibo"></i> 微博：
+                @if(!empty($info->weibo_address))
+                    <a target="_blank" href="{{$info->weibo_address or ''}}">{{$info->weibo_name or ''}}</a>
+                @else
+                    {{$info->weibo_name or ''}}
+                @endif
+            </div>
+        @endif
+
+        <div class="">&nbsp;</div>
+        <div class="">版权所有 <a target="_blank" href="javascript:void(0);">©上海米同网络科技有限公司</a></div>
+        <div class=""><a target="_blank" href="http://www.miitbeian.gov.cn">沪ICP备18011005号</a></div>
+
     </div>
+
+
 </div>
 
 {{--footer--}}

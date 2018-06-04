@@ -1,21 +1,21 @@
-{{--<!--Seciton Cases 案例-->--}}
+{{--<!--Seciton SEO Cases SEO案例-->--}}
 <section class="wrapper-module-container section-seo-case-list bg-white">
-    <div class="row full block-in">
+    <div class="block-in">
 
 
         {{--<!--header-->--}}
         <div class="module-header-box">
-            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".2s">
+            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".1s">
                 <h2 class="">SEO 案例展示</h2>
             </div>
-            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".4s">
+            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".2s">
                 <h4 class="">Seo Cases</h4>
             </div>
         </div>
 
 
         {{--<!--body-->--}}
-        <section class="module-body-box wow fadeInUp" data-wow-delay=".4s">
+        <div class="module-body-box wow fadeInUp" data-wow-delay=".3s">
             <ul class="list-unstyled clearfix">
 
                     <li class="rectangle-container">
@@ -60,11 +60,13 @@
                     </li>
 
             </ul>
-        </section>
+        </div>
 
 
-        <section class="module-footer-container">
-        </section>
+        {{--<!--footer-->--}}
+        <div class="module-footer-container">
+        </div>
+
 
     </div>
 </section>

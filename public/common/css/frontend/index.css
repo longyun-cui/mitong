@@ -861,12 +861,6 @@ body:before {
 
 @media (max-width:1023px) {
 
-    .block-in {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
     .block-3-column .item-block,
     .block-4-column .item-block {
         width: calc(100% - 4px);
