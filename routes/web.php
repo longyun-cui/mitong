@@ -37,10 +37,14 @@ Route::group(['namespace' => 'Front'], function () {
 
     $controller = "IndexController";
 
-    Route::get('/', $controller.'@index');
+    Route::get('/', $controller.'@view_root');
+
 
     Route::get('website/templates', $controller.'@view_website_templates');
     Route::get('website/template/{id?}', $controller.'@view_website_template');
+
+
+    Route::get('seo/cases', $controller.'@view_seo_cases');
 
 
 });

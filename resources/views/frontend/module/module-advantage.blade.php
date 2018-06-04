@@ -1,17 +1,21 @@
 {{--<!--Seciton Advantages of Platform 平台的优势-->--}}
-<section class="home-section wrapper-module-container section-advantage">
+<section class="wrapper-module-container section-advantage">
     <div class="row full block-in">
 
 
-        <div class="module-header-container">
-            <h2 class="fadeInUp" data-wow-delay=".3s">平台的优势</h2>
-            <h4 class="fadeInUp" data-wow-delay=".3s"> &nbsp; </h4>
-            <h3 class="en wow fadeInUp" data-wow-delay=".01s">Advantages of Platform</h3>
+        {{--<!--header-->--}}
+        <div class="module-header-box">
+            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".2s">
+                <h2 class="">平台的优势</h2>
+            </div>
+            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".4s">
+                <h4 class="">Advantages of Platform</h4>
+            </div>
         </div>
 
 
-        <div class="module-block-container">
-        <div class="wow fadeIn" data-wow-delay=".6s" id="advantage">
+        {{--<!--body-->--}}
+        <div class="module-body-box wow fadeIn" data-wow-delay=".6s">
 
             <div class="rectangle-container">
                 <div class="before-box before-1-3">
@@ -160,7 +164,6 @@
             </div>
 
 
-        </div>
         </div>
 
 

@@ -9,6 +9,7 @@ use App\Repositories\Front\IndexRepository;
 
 class IndexController extends Controller
 {
+
     //
     private $service;
     private $repo;
@@ -19,22 +20,35 @@ class IndexController extends Controller
 
 
 
-    // 返回主页视图
-    public function index()
+    // 返回【主页】视图
+    public function view_root()
     {
-        return $this->repo->index();
+        return $this->repo->root();
     }
 
-    // 返回主页视图
+
+
+
+    // 返回【建站模板】【列表页】视图
     public function view_website_templates()
     {
         return $this->repo->website_templates();
     }
-    // 返回主页视图
+    // 返回【建站模板】【详情页】视图
     public function view_website_template($id)
     {
         return $this->repo->website_template($id);
     }
+
+
+
+
+    // 返回【SEO案例】【列表页】视图
+    public function view_seo_cases()
+    {
+        return $this->repo->seo_cases();
+    }
+
 
 
 

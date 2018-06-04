@@ -2,12 +2,11 @@
 
 
 {{--html.head--}}
-@section('head_title')建站模板 - {{$info->name or ''}}@endsection
+@section('head_title'){{$info->name or ''}}@endsection
 @section('meta_author')@endsection
 @section('meta_title')@endsection
 @section('meta_description')@endsection
 @section('meta_keywords')@endsection
-
 
 
 
@@ -32,11 +31,23 @@
     {{--banner--}}
     @include('frontend.component.banner')
 
-    {{--module-website-template--}}
-    @include('frontend.module.module-website-template', ['datas'=>$websiteTemplates, 'module_name'=>'建站模板', 'module_type'=>'paginate'])
+    {{--module-advantage--}}
+    @include('frontend.module.module-advantage')
+
+    {{--module-seo-case--}}
+    @include('frontend.module.module-seo-case', ['datas'=>$seoCases])
+
+    {{--bmodule-website-templateanner--}}
+    @include('frontend.module.module-website-template', ['datas'=>$websiteTemplates, 'module_name'=>'建站模板', 'module_type'=>'root'])
+
+    {{--module-partner--}}
+    @include('frontend.module.module-partner')
 
     {{--module-contact--}}
     @include('frontend.module.module-contact')
+
+    {{--module-toolbar--}}
+    @include('frontend.module.module-toolbar')
 
 
 @endsection

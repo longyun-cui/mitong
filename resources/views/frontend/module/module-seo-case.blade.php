@@ -1,16 +1,20 @@
 {{--<!--Seciton Cases 案例-->--}}
-<section class="wrapper-module-container home-section home-section-case section-case background-bg1">
+<section class="wrapper-module-container section-case background-fixed bg-fixed-map-point">
     <div class="row full block-in">
 
-        <div class="module-header-container">
-            <h2 class="wow fadeInUp" data-wow-delay=".4s">案例展示</h2>
-            <h4 class="wow fadeInUp" data-wow-delay=".4s"> &nbsp; </h4>
-            <h3 class="en wow fadeInUp" data-wow-delay=".2s">Cases</h3>
+
+        {{--<!--header-->--}}
+        <div class="module-header-box">
+            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".2s">
+                <h2 class="">SEO 案例展示</h2>
+            </div>
+            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".4s">
+                <h4 class="">Seo Cases</h4>
+            </div>
         </div>
 
         <!--Case-->
-        <div class="module-block-container wow fadeInUp" data-wow-delay=".4s">
-        <section class="case-list- container-" style="padding-top: 0">
+        <div class="module-body-box wow fadeInUp" data-wow-delay=".4s">
             <ul class="list-unstyled clearfix">
 
                 @foreach($datas as $v)
@@ -79,12 +83,13 @@
                 @endfor
 
             </ul>
-        </section>
         </div>
 
 
         <div class="text-center">
-            <a href="javascript:void(0);" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">查看更多 &nbsp;&nbsp;<i class="icon-hand-right"></i></a>
+            <a target="_blank" href="{{ url('seo/cases') }}" class="home-customer-more wow fadeInRight" data-wow-delay=".8s">
+                查看更多 <i class="icon-hand-right"></i>
+            </a>
         </div>
 
     </div>

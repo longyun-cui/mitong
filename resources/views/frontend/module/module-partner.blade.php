@@ -1,15 +1,21 @@
 {{--<!--Seciton Pratner 合作媒体-->--}}
-<section class="wrapper-module-container home-section home-section-customer section-partner">
+<section class="wrapper-module-container section-partner bg-white">
     <div class="row full block-in">
 
-        <!--Group-->
-        <div class="module-header-container">
-            <h2 class="en wow fadeInUp" data-wow-delay=".2s">Partners</h2>
-            <h2 class="ch wow fadeInUp" data-wow-delay=".4s">合作伙伴</h2>
+
+        {{--<!--header-->--}}
+        <div class="module-header-box">
+            <div class="module-header-title-row wow fadeInUp" data-wow-delay=".2s">
+                <h2 class="">合作伙伴</h2>
+            </div>
+            <div class="module-header-desc-row wow fadeInUp" data-wow-delay=".4s">
+                <h4 class="">Partners</h4>
+            </div>
         </div>
 
-        <!--Customer-->
-        <div class="module-block-container wow fadeIn" data-wow-delay=".6s" id="home-customer">
+
+        {{--<!--body-->--}}
+        <div class="module-body-box wow fadeIn" data-wow-delay=".6s">
 
 
             <div class="rectangle-container before-3-5">
@@ -84,8 +90,6 @@
 
 
         </div>
-
-
 
 
     </div>

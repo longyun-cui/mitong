@@ -2,11 +2,12 @@
 
 
 {{--html.head--}}
-@section('head_title'){{$info->name or ''}}@endsection
+@section('head_title')SEO案例 - {{$info->name or ''}}@endsection
 @section('meta_author')@endsection
 @section('meta_title')@endsection
 @section('meta_description')@endsection
 @section('meta_keywords')@endsection
+
 
 
 
@@ -28,17 +29,17 @@
 @section('custom-content')
 
     {{--banner--}}
-    @include('frontend.component.banner')
+    <section class="wrapper-module-container module-banner-img">
+        <div class="row full block-full">
+            <img src="{{ asset('mitong/images/platform-banner.jpg.png') }}" alt="">
+        </div>
+    </section>
 
+    {{--module-seo-case--}}
+    @include('frontend.module.module-seo-case-list', ['datas'=>$seoCases, 'module_name'=>'建站模板', 'module_type'=>'paginate'])
 
-    @include('frontend.module.module-advantage')
-
-    @include('frontend.module.module-seo-case', ['datas'=>$seoCases])
-
-    @include('frontend.module.module-website-template', ['datas'=>$websiteTemplates])
-
-    @include('frontend.module.module-partner')
-
+    {{--module-contact--}}
     @include('frontend.module.module-contact')
 
 @endsection
+

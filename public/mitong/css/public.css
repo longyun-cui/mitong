@@ -6,7 +6,7 @@
 .centerBlock{margin-left:auto;margin-right:auto}
 .clearfix{clear:both}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0;min-width:1280px}
+/*body{margin:0;min-width:1280px}*/
 article,c aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block;padding:0;margin:0}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}

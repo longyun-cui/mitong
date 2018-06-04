@@ -4,7 +4,7 @@
 
 
             <div class="module-header-container wow fadeInUp" data-wow-delay=".2s">
-                <span class="menu-title"><b>网站模板</b></span>
+                <span class="menu-title"><b>{{ $module_name or '建站模板' }}</b></span>
             </div>
 
             <div class="module-block-container rectangle-col-4 wow fadeInUp" data-wow-delay=".3s">
@@ -33,7 +33,7 @@
                     {{ $datas->links() }}
                 @else
                     <div class="text-center">
-                        <a href="{{url('/website/templates')}}" class="home-customer-more wow fadeInRight" data-wow-delay=".8s" target="_blank">
+                        <a target="_blank" href="{{url('/website/templates')}}" class="home-customer-more wow fadeInRight" data-wow-delay=".8s">
                             查看更多 <i class="icon-hand-right"></i>
                         </a>
                     </div>

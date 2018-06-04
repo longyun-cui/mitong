@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>米同</title>
+    <title>@yield('head_title')</title>
     <meta name="generator" content="" />
     <meta name="author" content="" />
     <meta name="keywords" content="厦门seo,贵阳seo,南昌网站优化,贵州网站优化,浙江网站优化,福建网站优化" />
@@ -10,9 +10,14 @@
     <link rel="shortcut icon" href="images/favicon.ico.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <!-- include need css -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://cdn.bootcss.com/jquery-form-validator/2.3.77/theme-default.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/mitong/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="/mitong/css/public.css" />
@@ -20,7 +25,6 @@
     <link rel="stylesheet" type="text/css" href="/mitong/css/fractionslider.css" />
     <link rel="stylesheet" type="text/css" href="/mitong/css/animate.css" />
 
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/common.css') }}" media="all" />
     <link type="text/css" rel="stylesheet" href="{{ asset('common/css/frontend/index.css') }}" media="all" />
@@ -32,6 +36,14 @@
 
     @yield('css')
     @yield('style')
+
+
+    <!--[if lt IE 9]>
+    <script src="/mitong/js/html5.min.js"></script>
+    <script src="/mitong/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/mitong/js/jquery.min.js"></script>
 
 
 </head>
@@ -103,6 +115,8 @@
 
         </div>
     </section>
+
+
     <!--Footer-->
     <footer class="footer" style="display:none;">
         <div class="container block">
@@ -128,70 +142,6 @@
     <!--Footer-->
 
 
-    {{--<!--ToolBar-->--}}
-    <div class="toolbar-show" id="toolbar-show">
-    </div>
-    <section class="toolbar" id="toolbar">
-    <b class="toolbar-closed icon-remove" id="toolbar-remove"></b><div class="return-top" id="returnTop"></div>
-    <ul class="list-unstyled">
-        <li class="toolbar-1 toolbar-items" style="background-image:url('/mitong/images/toolbar_01.png');">
-            <a href="javascript:;" class="blockFull">QQ咨询</a>
-            <div class="slide-float" style="padding-top:20px;padding-bottom:20px;">
-                <p style="font-size:16px;line-height:1;color:#a8a8a8;margin-bottom:15px;">
-                    在线咨询
-                </p>
-                <a href="http://wpa.qq.com/msgrd?v=1&amp;uin=1871727403&amp;site=www.trueland.net&amp;Menu=yes" target="_blank" class="block" style="margin-bottom:15px;">
-                    <img src="/mitong/picture/qq-man.png" class="qq-ico" alt="" /> <span style="color:#fff;font-size:12px;">售前服务</span>
-                </a>
-                <a href="http://wpa.qq.com/msgrd?v=1&amp;uin=735283159&amp;site=www.trueland.net&amp;Menu=yes" target="_blank" class="block" style="margin-bottom:15px;">
-                    <img src="/mitong/picture/qq-man.png" class="qq-ico" alt="" /> <span style="color:#fff;font-size:12px;">售后服务</span>
-                </a>
-            </div>
-        </li>
-        <li class="toolbar-2 toolbar-items" style="background-image:url('/mitong/images/toolbar_02.png');">
-            <a href="javascript:;" class="blockFull">免费热线</a>
-            <div class="slide-float">
-                <p>
-                    免费电话咨询
-                </p>
-                <p style="background:url('/mitong/images/toolbar.png') no-repeat 0 -45px;height:70px;width:45px;margin-left:auto;margin-right:auto;">
-                    <br />
-                </p>
-                <p style="font-size:12px;">
-                    全国售前热线
-                </p>
-                <p style="font-size:17px;font-family:'century gothic';color:#dcdcdc;">
-                    18621365151
-                </p>
-                <p style="font-size:12px;">
-                    全国售后热线
-                </p>
-                <p style="font-size:18px;font-family:'century gothic';color:#dcdcdc;">
-                    17717368566
-                </p>
-            </div>
-        </li>
-
-        <li class="toolbar-3 toolbar-items" style="background-image:url('/mitong/images/toolbar_03.png');">
-            <a href="about_Message.php.html" target="_blank" class="blockFull">在线留言</a>
-            <div class="slide-float slide-float-message">
-                <p>
-                    欢迎留言我们！<br />
-                    我们会尽快回复您...
-                </p>
-            </div>
-        </li>
-        <li class="toolbar-4 toolbar-items" style="background-image:url('/mitong/images/toolbar_04.png');">
-            <a href="javascript:;" class="blockFull">扫描二维码</a>
-            <div class="slide-float">
-                <p>
-                    <img src="/mitong/picture/top-erweima.jpg" alt="" width="100%" />
-                </p>
-            </div>
-        </li>
-
-    </ul>
-</section>
 
 
 
@@ -209,18 +159,15 @@
 
     <script src="/mitong/js/wow.min.js" type="text/javascript" charset="utf-8"></script>
 
+    <script src="https://cdn.bootcss.com/jquery-form-validator/2.3.77/jquery.form-validator.min.js"></script>
+
     <div class="totalcount" style="display: none">
     </div>
 
 
 
 
-    <!--[if lt IE 9]>
-    <script src="/mitong/js/html5.min.js"></script>
-    <script src="/mitong/js/respond.min.js"></script>
-    <![endif]-->
 
-    <script src="/mitong/js/jquery.min.js"></script>
 
 
 
@@ -264,12 +211,12 @@
             /*home-customer*/
             $("#home-customer .items").each(function(index) {
                 $("#home-customer .items").slice(index * 12, index * 12 + 12).wrapAll("<div></div>");
-            })
+            });
 
 //            $("#home-customer").slick({
 //                useTransform: true,
 //                autoplay: true
-//            })
+//            });
 
             /*home-advantage*/
 //            $("#advantage").slick({
@@ -284,9 +231,7 @@
                 new WOW().init();
             }
 
-        })
-
-
+        });
 
     </script>
 
@@ -302,6 +247,9 @@
         })
 
     </script>
+
+
+    <script src="{{ asset('/mitong/js/index.js') }}" type="text/javascript" charset="utf-8"></script>
 
 
     @yield('js')
