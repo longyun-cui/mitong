@@ -38,5 +38,8 @@
     {{--module-contact--}}
     @include('frontend.module.module-contact')
 
+    {{--module-toolbar--}}
+    @include('frontend.module.module-toolbar')
+
 
 @endsection

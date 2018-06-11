@@ -287,6 +287,9 @@ canvas.drawer {
     /*box-shadow: 4px 4px 32px #f8f8f8;*/
     /*background: #fff;*/
 }
+.wrapper-module-container.module-none-padding { padding-top: 0; padding-bottom: 0; }
+
+
 .block-full, .block-all { width:100%; }
 .block-in {
     width:1080px;
@@ -367,3 +370,83 @@ canvas.drawer {
 /*module-footer*/
 .module-footer-box {
 }
+
+
+
+.module-banner-img img { width: 100%; }
+
+.module-fixed-banner img { width: 100%; }
+.module-fixed-breadcrumb {
+    padding: 16px;
+    border-bottom: 2px solid #e2e2e2;
+}
+.module-fixed-breadcrumb .breadcrumb {
+    margin-bottom: 0;
+    color: #666;
+    font-size: 14px;
+    list-style: none;
+    background-color: inherit;
+}
+
+.module-fixed-body .aside-left-box {
+    width: 200px;
+    min-height: 480px;
+    padding-top: 48px;
+    padding-bottom: 32px;
+    padding-right: 0;
+    float: left;
+}
+
+.module-fixed-body .aside-right-box {
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: calc(100% - 200px);
+    min-height: 480px;
+    border-left: 3px solid #e6e6e6;
+    padding-bottom: 96px;
+    float: right;
+}
+.module-fixed-body .module-header-bin {
+    width: -webkit-calc(100% - 48px);
+    width: -moz-calc(100% - 48px);
+    width: calc(100% - 48px);
+    padding: 16px;
+    margin: 32px;
+    border-bottom: 1px dotted #bfbfbf;
+}
+.module-fixed-body .module-title-row font {
+    color: #ff5c01;
+    font-weight: bold;
+}
+.module-fixed-body .module-desc-row { color: #a9a9a9; }
+
+.module-fixed-body .module-content-bin {
+    margin: 32px;
+    font-family:inherit;
+    font-size: 16px;
+    text-align: left;
+    line-height: 24px;
+}
+.module-fixed-body .module-content-bin p { text-indent: 2em; padding: 0; margin: 0; margin-bottom: 8px; }
+
+
+.module-fixed-body .aside-left {  }
+
+.content .aside-nav .round {
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -mz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 10;
+    top: 10px;
+    right: -8px;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 2px solid #feaa06;
+}
+
+
+

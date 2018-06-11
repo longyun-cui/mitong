@@ -28,28 +28,28 @@
             <div class="line" id="nav-line">&nbsp;</div>
             <ul class="list-unstyled clearfix">
                 <li>
-                    <a href="index.html" data-info="首 页">首 页</a>
+                    <a href="{{ url('/') }}" data-info="首 页">首 页</a>
                 </li>
                 <li>
-                    <a href="platform.php.html" data-info="平台概览">平台概览</a>
+                    <a href="{{ url('/platform') }}" data-info="平台概览">平台概览</a>
                     <div class="nav-childs platform-childs">
                         <div class="container">
                             <div class="pull-right list">
                                 <dl>
                                     <dd class="type-1">
-                                        <a href="platform.php.html" class="icon">平台优势</a>
+                                        <a href="{{ url('/platform') }}" class="icon">平台优势</a>
                                         <div class="text">
                                             广告投放全程系统监控，自动调优策略与投放细节，智能提升广告效果。
                                         </div>
                                     </dd>
                                     <dd class="type-2">
-                                        <a href="platform.php.html" class="icon">平台资源</a>
+                                        <a href="{{ url('/platform') }}" class="icon">平台资源</a>
                                         <div class="text">
                                             将网络营销中需要的各种渠道、工具、资源都聚集到一起，按照多维的...
                                         </div>
                                     </dd>
                                     <dd class="type-3">
-                                        <a href="platform.php.html" class="icon">行业趋势</a>
+                                        <a href="{{ url('/platform') }}" class="icon">行业趋势</a>
                                         <div class="text">
                                             新的模式不单单对于广告主，网络营销（未来必须也包含线下广告）的...
                                         </div>
@@ -97,10 +97,13 @@
                     <!--Child-->
                 </li>
                 <li>
-                    <a href="cases.php.html" data-info="案例">案例</a>
+                    <a href="{{ url('/seo/cases') }}" data-info="案例">SEO案例</a>
                 </li>
                 <li>
-                    <a href="about_Home.php.html" data-info="关于米同">关于米同</a>
+                    <a href="{{ url('/website/templates') }}" data-info="案例">企业建站</a>
+                </li>
+                <li>
+                    <a href="{{ url('/about') }}" data-info="关于米同">关于米同</a>
                     <div class="nav-childs about-childs">
                         <div class="container">
                             <div class="pull-right items-box">
@@ -112,19 +115,19 @@
                             <div class="pull-right items-box">
                                 <dl class="list-unstyled list">
                                     <dd>
-                                        <a href="about_companyIntroduction.php.html">公司介绍</a>
+                                        <a href="{{ url('/about/introduction') }}">企业介绍</a>
                                     </dd>
                                     <dd>
-                                        <a href="about_honor.php.html">资质与荣誉</a>
+                                        <a href="{{ url('/about/honor') }}">资质与荣誉</a>
                                     </dd>
                                     <dd>
-                                        <a href="about_cooperativePartner.php.html">合作伙伴</a>
+                                        <a href="{{ url('/about/partner') }}">合作伙伴</a>
                                     </dd>
-                                    <dd>
-                                        <a href="about_evaluate.php.html">客户评价</a>
-                                    </dd>
+                                    {{--<dd>--}}
+                                        {{--<a href="{{ url('/about/evaluate') }}">客户评价</a>--}}
+                                    {{--</dd>--}}
                                     <dd >
-                                        <a href="about_Message.php.html">在线留言</a>
+                                        <a href="{{ url('/about/message') }}">在线留言</a>
                                     </dd>
                                 </dl>
                             </div>
@@ -136,7 +139,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="contact.php.html">联系我们</a></li>
+                <li><a href="#contact">联系我们</a></li>
                 <!--<li><a href="/zhaoshang.php">招商加盟</a></li>-->
             </ul>
         </nav>

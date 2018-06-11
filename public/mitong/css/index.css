@@ -2,11 +2,16 @@
 .nav-container .nav-childs {line-height: 1.6;}
 
 
+/*
+    // about
+*/
 
 /*
     // banner
 */
-.wrapper-module-container.module-banner-img { padding: 0; }
+.wrapper-module-container.module-banner-img,
+.wrapper-module-container.module-about
+{ padding: 0; }
 
 
 

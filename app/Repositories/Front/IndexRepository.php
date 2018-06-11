@@ -36,6 +36,68 @@ class IndexRepository {
         return $html;
     }
 
+    // about
+    public function about()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.about')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
+    // about
+    public function about_introduction()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.about.introduction')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+    // about
+    public function about_honor()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.about.honor')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+    // about
+    public function about_partner()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.about.partner')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+    // about
+    public function about_layout()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.about.layout')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+    // about
+    public function about_message()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.about.message')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
 
 
 

@@ -27,6 +27,38 @@ class IndexController extends Controller
     }
 
 
+    // 返回【关于】视图
+    public function view_about()
+    {
+        return $this->repo->about();
+    }
+    // 返回【关于】视图
+    public function view_about_introduction()
+    {
+        return $this->repo->about_introduction();
+    }
+    // 返回【关于】视图
+    public function view_about_honor()
+    {
+        return $this->repo->about_honor();
+    }
+    // 返回【关于】视图
+    public function view_about_partner()
+    {
+        return $this->repo->about_partner();
+    }
+    // 返回【关于】视图
+    public function view_about_layout()
+    {
+        return $this->repo->about_layout();
+    }
+    // 返回【关于】视图
+    public function view_about_message()
+    {
+        return $this->repo->about_message();
+    }
+
+
 
 
     // 返回【建站模板】【列表页】视图

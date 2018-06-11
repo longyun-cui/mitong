@@ -2,12 +2,11 @@
 
 
 {{--html.head--}}
-@section('head_title')SEO案例 - {{$info->name or ''}}@endsection
+@section('head_title'){{$info->name or ''}}@endsection
 @section('meta_author')@endsection
 @section('meta_title')@endsection
 @section('meta_description')@endsection
 @section('meta_keywords')@endsection
-
 
 
 
@@ -30,17 +29,13 @@
 
 
     {{--banner--}}
-    @include('frontend.module.module-banner-platform')
+    @include('frontend.module.module-banner-about')
 
-    {{--module-seo-case--}}
-    @include('frontend.module.module-seo-case-list', ['datas'=>$seoCases, 'module_name'=>'建站模板', 'module_type'=>'paginate'])
-
-    {{--module-contact--}}
-    @include('frontend.module.module-contact')
+    {{--module-advantage--}}
+    @include('frontend.module.module-about', ['data'=>""])
 
     {{--module-toolbar--}}
     @include('frontend.module.module-toolbar')
 
 
 @endsection
-

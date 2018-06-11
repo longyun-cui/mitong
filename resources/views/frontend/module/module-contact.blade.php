@@ -1,5 +1,5 @@
 {{--<!--Seciton Contact Us 联系我们-->--}}
-<section class="wrapper-module-container module-contact background-fixed bg-fixed-map-point">
+<section class="wrapper-module-container module-contact background-fixed bg-fixed-map-point" id="contact">
     <div class="row full block-in">
 
 
@@ -17,7 +17,7 @@
         {{--<!--body-->--}}
         <div class="module-body-box wow fadeInUp" data-wow-delay=".3s">
 
-            <section class="col-md-8 col-lg-8">
+            <section class="col-sm-8 col-md-8 col-lg-8">
                     <div class="">
                         <div class="info">
                             <div class="info-row">
@@ -44,7 +44,7 @@
                     </div>
             </section>
 
-            <section class="col-md-4 col-lg-4">
+            <section class="col-sm-4 col-md-4 col-lg-4">
                     <div class="">
                         <form name="sentMessage" id="contactForm" novalidate="">
                             <div class="">

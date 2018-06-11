@@ -776,7 +776,7 @@ body{padding-top:64px}
 .crumbs .ar{font-family:"宋体"}
 @media (max-width:767px){.crumbs{font-size:12px;padding-top:10px;padding-bottom:10px}
 }
-.content{margin-bottom:80px}
+/*.content{margin-bottom:80px}*/
 .content .aside{width:15%;padding-top:40px}
 @media (max-width:991px){.content .aside{display:none}
 }
