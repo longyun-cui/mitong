@@ -28,13 +28,81 @@ class IndexRepository {
         $info = json_decode(json_encode(config('mitong.company.info')));
         $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
 
-        $seoCases = RootSeoCase::where(['active'=>1])->orderby('id', 'desc')->limit(6)->get();
-        $websiteTemplates = RootWebsiteTemplate::where(['active'=>1])->orderby('id', 'desc')->limit(8)->get();
+//        $seoCases = RootSeoCase::where(['active'=>1])->orderby('id', 'desc')->limit(6)->get();
+//        $websiteTemplates = RootWebsiteTemplate::where(['active'=>1])->orderby('id', 'desc')->limit(8)->get();
+//
+//        $html = view('frontend.entrance.root')
+//            ->with(['info'=>$info, 'menus'=>$menus, 'seoCases'=>$seoCases, 'websiteTemplates'=>$websiteTemplates])->__toString();
+//        return $html;
 
-        $html = view('frontend.entrance.root')
-            ->with(['info'=>$info, 'menus'=>$menus, 'seoCases'=>$seoCases, 'websiteTemplates'=>$websiteTemplates])->__toString();
+        $html = view('frontend.entrance.new.root')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
         return $html;
     }
+
+
+
+
+    // services
+    public function services()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.new.services')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
+    // service_seo
+    public function service_SEO()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.new.service.seo')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
+    // service_PR
+    public function service_PR()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.new.service.pr')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
+    // service_AIBully
+    public function service_AIBully()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.new.service.bully')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
+
+
+
+    // service_AIBully
+    public function join_us()
+    {
+        $info = json_decode(json_encode(config('mitong.company.info')));
+        $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
+
+        $html = view('frontend.entrance.new.join')
+            ->with(['info'=>$info, 'menus'=>$menus])->__toString();
+        return $html;
+    }
+
+
+
 
     // about
     public function about()
@@ -42,7 +110,7 @@ class IndexRepository {
         $info = json_decode(json_encode(config('mitong.company.info')));
         $menus = RootMenu::where(['active'=>1])->orderby('order', 'asc')->get();
 
-        $html = view('frontend.entrance.about')
+        $html = view('frontend.entrance.new.about')
             ->with(['info'=>$info, 'menus'=>$menus])->__toString();
         return $html;
     }

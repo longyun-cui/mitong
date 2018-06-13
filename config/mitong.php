@@ -21,7 +21,7 @@
                 'mobile' => '15800689433',
                 'pre_sale' => '18621365151',
                 'after_sale' => '17717368566',
-                'email' => 'admin@softorg.cn',
+                'email' => 'ceo@shmitong.com',
                 'wechat_id' => 'Mitong-SEO',
                 'wechat_qrcode' => 'mitong/picture/top-erweima.jpg',
                 'weibo_name' => '',

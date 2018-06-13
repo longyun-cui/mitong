@@ -27,6 +27,35 @@ class IndexController extends Controller
     }
 
 
+    // 返回【服务】视图
+    public function view_services()
+    {
+        return $this->repo->services();
+    }
+    // 返回【服务】视图
+    public function view_service_SEO()
+    {
+        return $this->repo->service_SEO();
+    }
+    // 返回【服务】视图
+    public function view_service_PR()
+    {
+        return $this->repo->service_PR();
+    }
+    // 返回【服务】视图
+    public function view_service_AIBully()
+    {
+        return $this->repo->service_AIBully();
+    }
+
+
+    // 返回【加盟】视图
+    public function view_join_us()
+    {
+        return $this->repo->join_us();
+    }
+
+
     // 返回【关于】视图
     public function view_about()
     {

@@ -39,6 +39,13 @@ Route::group(['namespace' => 'Front'], function () {
 
     Route::get('/', $controller.'@view_root');
 
+    Route::get('joinUS', $controller.'@view_join_us');
+
+    Route::get('services', $controller.'@view_services');
+    Route::get('service/SEO', $controller.'@view_service_SEO');
+    Route::get('service/PR', $controller.'@view_service_PR');
+    Route::get('service/AIBully', $controller.'@view_service_AIBully');
+
     Route::get('about', $controller.'@view_about');
     Route::get('about/introduction', $controller.'@view_about_introduction');
     Route::get('about/honor', $controller.'@view_about_honor');
