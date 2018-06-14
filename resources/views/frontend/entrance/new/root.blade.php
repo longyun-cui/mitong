@@ -31,7 +31,7 @@
 
     <div class="wrapper-module-container module-none-padding">
         <div class="block-all">
-            <img src="{{ asset('/mitong/images_new/home.png') }}" width="100%" alt="" />
+            <img src="{{ asset('/mitong/images_new/home.jpg') }}" width="100%" alt="" />
         </div>
     </div>
 
