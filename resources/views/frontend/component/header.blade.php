@@ -30,7 +30,7 @@
                 <li>
                     <a href="{{ url('/') }}" data-info="首 页">米同科技</a>
                 </li>
-                <li>
+                <li style="display:none;">
                     <a href="{{ url('/platform') }}" data-info="平台概览">平台概览</a>
                     <div class="nav-childs platform-childs">
                         <div class="container">
@@ -93,7 +93,7 @@
                     <!--Child-->
                 </li>
                 <li>
-                    <a href="{{ url('/services') }}" data-info="关于米同">服务产品</a>
+                    <a href="{{ url('/services') }}" data-info="服务产品">服务产品</a>
                     <div class="nav-childs about-childs">
                         <div class="container">
                             <div class="pull-right items-box">
@@ -112,17 +112,13 @@
                     </div>
                 </li>
                 {{--SEO案例--}}
-                <li style="display:none;">
-                    <a href="{{ url('/seo/cases') }}" data-info="案例">SEO案例</a>
-                </li>
+                <li style="display:none;"><a href="{{ url('/seo/cases') }}" data-info="案例">SEO案例</a></li>
                 {{--企业建站--}}
-                <li style="display:none;">
-                    <a href="{{ url('/website/templates') }}" data-info="案例">企业建站</a>
-                </li>
+                <li style="display:none;"><a href="{{ url('/website/templates') }}" data-info="案例">企业建站</a></li>
                 {{--关于米同--}}
-                <li>
-                    <a href="{{ url('/about') }}" data-info="案例">关于米同</a>
-                </li>
+                <li><a href="{{ url('/joinUS') }}">招商加盟</a></li>
+                {{--关于米同--}}
+                <li><a href="{{ url('/about') }}" data-info="案例">关于米同</a></li>
                 {{--关于米同--}}
                 <li style="display:none;">
                     <a href="{{ url('/about') }}" data-info="关于米同">关于米同</a>
@@ -162,7 +158,6 @@
                     </div>
                 </li>
                 <li style="display:none;"><a href="#contact">联系我们</a></li>
-                <li><a href="{{ url('/joinUS') }}">招商加盟</a></li>
             </ul>
         </nav>
 
