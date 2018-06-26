@@ -5,8 +5,9 @@
         'host' => [
 
             'local' => [
-                'root' => 'http://mitong.com',
-                'cdn' => 'http://cdn.mitong.com',
+                'root' => 'http://local-mitong.com',
+                'www' => 'http://www.local-mitong.com',
+                'cdn' => 'http://cdn.local-mitong.com',
             ],
 
             'online' => [
